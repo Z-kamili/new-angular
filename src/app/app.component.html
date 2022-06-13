@@ -20,4 +20,8 @@
 
 <button type="button" (click)="greet(myInfo)" class="btn btn-primary">{{myInfo ? 'disable' : 'enable'}}</button>
 
-data : {{myInfo}}
+{{customerArray}}
+
+<ul>
+  <li *ngFor="let person of personObject">{{person.name}}</li>
+</ul>
