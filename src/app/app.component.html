@@ -1,5 +1,7 @@
-<h1>Hello Zakaria</h1>
+<h1>Hello Zakaria {{myname}}</h1>
 
+
+{{myAge}}
 
 <div *ngIf="!myInfo;else elseBlock">
 
@@ -13,3 +15,8 @@
   Hello Every one
 
 </ng-template>
+
+<br>
+
+<button type="button" (click)="greet(myInfo)" class="btn btn-primary">{{myInfo ? 'disable' : 'enable'}}</button>
+

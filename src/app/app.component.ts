@@ -7,8 +7,23 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-new';
+  myname = "Zakaria";
+  myInfo:boolean = false;
+  myName:string = "Alice";
+  myAge:number = 25;
 
-  myInfo = false;
+
+  greet(myInfo: boolean)
+  {
+   console.log("hiiii");
+   this.myInfo = !myInfo;
+  }
+
+  onsave()
+  {
+    console.log("hii");
+  }
+
 
 
 }
