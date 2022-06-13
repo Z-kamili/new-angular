@@ -10,7 +10,6 @@ export class AppComponent {
   myname = "Zakaria";
   myInfo:boolean = false;
   myName:string = "Alice";
-  myAge:number = 25;
 
 
   greet(myInfo: boolean)
