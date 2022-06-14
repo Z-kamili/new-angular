@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {ProductService} from './product.service';
+import { Product } from "./Product";
 
 
 @Component({
@@ -8,8 +10,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  products: Product[] = [];
+  ProductService;
   mydate = new Date();
-  myJson = {name:"zakaria",age:25,department:"Backend developer",address:{city:'safi',phoneNumber:12308493}}
+  myJson = {name:"zakaria",age:25,department:"Backend developer",address:{city:'safi',phoneNumber:12308493}};
   myArrayNum = [22,23,12,90,100];
 
   printNumber:number = 12;
@@ -41,10 +45,19 @@ export class AppComponent {
     },
   ]
 
+   constructor()
+   {
+     this.ProductService = new ProductService();
+   }
+
+   getProducts() 
+   {
+      this.products = this.ProductService.getAllProducts();
+   }
+
 
    greet(myInfo: boolean)
    {
-     console.log("hiiii");
      this.myInfo = !myInfo;
    }
 
